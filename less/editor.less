@@ -1,0 +1,42 @@
+.gw-editor {
+  padding:10px;
+  width:100%;
+  height:100%;
+  background:@background;
+  color:@text;
+  font-family:@font-mono;
+  font-size:14px;
+  margin:0;  
+  resize: none;
+  border:none;
+  outline:none;
+  .gw-box-size;
+}
+
+.gw-editor-container {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  left:0px;
+  top:0px;
+  width:100%;
+  height:100%;
+  .gw-box-size;
+}
+
+.gw-editor-container .toolbar {
+  position: absolute;
+  right:20px;
+  top:5px;
+}
+
+.gw-editor-container .toolbar .icon {
+  float:left;
+  margin-left:10px;
+  color:@text-dim;
+  .gw-transition;
+}
+
+.gw-editor-container .toolbar .icon:hover {
+  color:@text-dim-highlight;
+}

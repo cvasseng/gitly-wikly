@@ -1,0 +1,174 @@
+html, body {
+  font-size:100%;
+  font-family: @font;
+  background: @background;
+  color: @text;
+  width:100%;
+  height:100%;
+  margin:0px;
+  padding:0px;  
+}
+
+hr {
+  height: 1px;
+  color: @color-splitter;
+  background: @color-splitter;
+  font-size: 0;
+  border: 0;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.gw-noselection {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor:default !important;
+}
+
+.gw-box-size {
+  box-sizing:border-box !important;
+  -moz-box-sizing:border-box !important;
+  -webkit-box-sizing:border-box !important;
+}
+
+.gw-transition {
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+
+.gw-transition-opacity {
+  transition:0.2s ease opacity; 
+  -moz-transition:0.2s ease opacity; 
+  -webkit-transition:0.2s ease opacity;
+}
+
+.gw-link {
+  color: @blue;
+  cursor: pointer;
+  .gw-transition;
+}
+
+.gw-link:hover {
+  text-decoration: underline;
+}
+
+.gw-info {
+  font-weight: 100;
+  font-size: 10px;
+  margin-top:40px;
+  text-align: center;
+  color:@text-dim;
+}
+
+.gw-main-content {
+  text-align: justify;
+
+  -webkit-touch-callout: all;
+  -webkit-user-select: all;
+  -khtml-user-select: all;
+  -moz-user-select: all;
+  -ms-user-select: all;
+  user-select: all;
+  cursor:default !important;
+
+}
+
+.gw-main-content p {
+  text-align: justify;
+}
+
+.gw-main-content .manuscript {
+  font-family: @font-mono;
+  font-size:14px;
+  width:100%;
+  text-align: justify;
+  max-width: 600px;
+  margin-left:50%;
+  transform:translate(-50%, 0);
+  margin-bottom: 40px;
+}
+
+.gw-main-content .chapter {
+  margin-top: 40px;
+  font-family: @font-mono;
+  font-size:22px;
+  max-width: 600px;
+  margin-left:50%;
+  text-align: left;
+  width:100%;
+  transform:translate(-50%, 0);
+}
+
+.gw-main-content .tab {
+  width:40px;
+  display:inline-block;
+}
+
+.gw-progress-indicator {
+  opacity: 0;
+  z-index: 1000;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  pointer-events: none;
+  font-size: 40px;
+  text-align: center;
+
+  .gw-transition;
+}
+
+.gw-import-progress {
+  position: fixed;
+  left:0px;
+  top:0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 20000;
+  pointer-events: none;
+  .gw-transition;
+}
+
+.gw-import-progress .progress {
+  position: absolute;
+  width:200px;
+  height:200px;
+  left:50%;
+  top:50%;
+  transform:translate(-50%, -50%);
+  background: @background;
+  z-index: 1;
+  border-radius: 10px;
+  font-size:50px;
+  text-align: center;
+  padding-top:50px;
+}
+
+.gw-import-progress .title {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.gw-dimmer {
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  background:#000;
+}
+
+
+@import "search.less";
+@import "main.toolbar.less";
+@import "doc.peek.less";
+@import "badge.less";
+@import "editor.less";
+@import "listbox.less";
+@import "layout.less";
+@import "reference.less";
+@import "peek.less";
+@import "log.less";

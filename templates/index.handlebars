@@ -1,0 +1,70 @@
+title: Welcome to Gitly Wikly!
+categories: Gitly Wikly
+tags: Help
+===
+
+Gitly Wikly is a simple Wiki-esque application, that scans the folder it was started in for markdown files, and indexes them. You can edit documents by clicking the pencil icon on the top right when a document is loaded.
+
+If there's a .git folder in the folder in which Gitly Wikly was started, changes to documents will result in a git add + commit + pull + push.
+
+For the git integration to work, git must be installed on your system, and available in your path.
+
+## References
+
+When enclosing sentences/words in double square brackets, a reference to the current document is exported. When this sentence/word appear in other documents, a cross reference will be added on the right side.
+
+This makes it easy to connect documents indirectly.
+
+As a concrete example: If document A contains a defined keyword "this is a keyword" in double square brackets, and document B contains the string (i.e. not in double square brackets) "this is a keyword", upon reading document B a "this is a keyword" entry will be created in the right panel, and the string highlighted, both of which can be clicked to peek at the documents "exporting" that reference.
+
+## Syntax
+
+[[Gitly Wikly]] uses standard markdown syntax, with the addition of double square brackets which indicate something that should be referenced/auto sourced.
+
+### Meta Information
+Documents carry meta information in their header:
+
+      title: My Document
+      categories: Category 1, Category 2, ...
+      tags: Tag 1, Tag 2, ...
+      ===
+      Document body goes here!
+
+Note that the `===` part is what separates the meta from the actual document.
+
+### Manuscript Formatting
+
+[!manuscript This is a manuscript --->
+
+Hello world. This is manuscript formatting. Click edit to see the syntax. Manuscript formatting displays at a max width of 600px, has justified alignment, and respects tab indentations.
+
+manuscript!]
+
+### Tables
+
+This:
+
+      this | *left* | center   | right
+      -----|:-------|:--------:|------:
+      with | sample | content  | for
+      lorem| ipsum  | dolor    | sit
+      sit  | amet   | sed      | do
+      do   | eiusom | tempor   | with 
+
+..becomes:
+
+this | *left* | center   | right
+-----|:-------|:--------:|------:
+with | sample | content  | for
+lorem| ipsum  | dolor    | sit
+sit  | amet   | sed      | do
+do   | eiusom | tempor   | with 
+
+### Other
+
+  * `*Italic*`
+  * `**Bold**`
+  * `***Bold Italic***`
+  * `[Link](url)`
+  * `![Image](image url)`
+  * `double space *` = bullet point

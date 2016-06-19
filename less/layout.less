@@ -1,0 +1,126 @@
+.gw-main {
+  width:100%;
+  height:100%;
+}
+
+.gw-main-panel {
+  padding:10px;
+  height:100%;
+  float:left;
+  overflow-y: auto;
+}
+
+.gw-main .left {
+  position: relative;
+  background:@background-dark;
+  width:20%;
+  .gw-main-panel;
+  overflow-y: scroll !important;
+}
+
+.gw-main .left .container {
+  padding-top:50px;
+  height:100%;
+  overflow-y: auto; 
+}
+
+.gw-main .left .sticky {
+  z-index: 1;
+  position: fixed;
+  top:0px;
+  left:0px;
+  width:20%;
+  padding-top: 10px;
+  padding-right:10px;
+  padding-left:25px;
+  transform: translate(-15px, 0);
+  background:@background-dark;
+}
+
+.gw-top-left-padding {
+  height:80px;
+}
+
+.gw-main .left h1 {
+  font-family: @font;
+  font-weight: 100;
+  font-size: 20px;
+  color: @text-dim;
+}
+
+.gw-main .right h1 {
+  font-family: @font;
+  font-weight: 100;
+  font-size: 20px;
+  color: @text-dim;
+}
+
+.gw-main .middle {
+  position: relative;
+  width:60%;  
+  background:@background-main-canvas;
+  color:@text-main-canvas;
+ .gw-main-panel;
+}
+
+.gw-main .middle table {
+  width:100%;
+  border-spacing: 0px;
+  border-collapse: separate;
+}
+
+.gw-main .middle tr:nth-child(odd) {
+  background: darken(@background, 2);
+}
+
+.gw-main .middle tr:hover {
+  background: darken(@background, 4) !important;
+}
+
+.gw-main .middle td {
+  padding:10px;
+}
+
+.gw-main .middle th {
+  padding-left:4px;
+  padding-right:4px;
+}
+
+.gw-main .middle .toolbar {
+  position: absolute;
+  top:5px;
+  right:5px;
+  .gw-transition;
+}
+
+.gw-main .middle .doedit {
+  position: absolute;
+  color:@text-dim;
+  top:5px;
+  right:5px;
+  .gw-transition;
+}
+
+.gw-main .middle .doedit:hover {
+  color:@text-dim-highlight;
+}
+
+.gw-main .middle .link {
+  color:@link;
+  
+  cursor:pointer;
+  text-decoration: underline;
+  .gw-transition;
+}
+
+.gw-main .middle .link:hover {
+  color:@link-hover;
+  font-weight: 400;
+}
+
+.gw-main .right {
+  background:@background-dark;
+  text-align: left;
+  width:20%;
+  .gw-main-panel;
+}

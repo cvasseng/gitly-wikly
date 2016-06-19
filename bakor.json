@@ -1,0 +1,25 @@
+{
+  "name": "gitlywikly",
+  "outputDir": "./build",
+  "dependencies":[],
+  "js":[
+    "./src/gitly.js",
+    "./src/dom.js",
+    "./src/index.js",
+    "./src/tags.js",
+    "./src/categories.js",
+    "./src/editor.js",
+    "./src/document.js",
+    "./src/search.js",
+    "./src/git.js",
+    "./src/peek.js",
+    "./src/socket.js",
+    "./src/datalayer.js",
+    "./src/import.js",
+    "./src/main.toolbar.js"
+  ],
+  "css":[],
+  "less":[
+    "less/light.less"
+  ]
+}
